@@ -15,7 +15,6 @@ int main(int argc, char ** argv) {
 	if (b == NULL) return -2;
 	printToScreen(A);
 	printToScreen(b);
-	printf("%f\n", A->data[1][0]);
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
