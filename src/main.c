@@ -15,10 +15,13 @@ int main(int argc, char ** argv) {
 	if (b == NULL) return -2;
 	printToScreen(A);
 	printToScreen(b);
+	printf("%f\n", A->data[1][0]);
 	res = eliminate(A,b);
 	x = createMatrix(b->r, 1);
 	if (x != NULL) {
 		res = backsubst(x,A,b);
+	printToScreen(A);
+	printToScreen(b);
 		printf("return value of res: %i\n", res);
 		printToScreen(x);
 	  freeMatrix(x);
